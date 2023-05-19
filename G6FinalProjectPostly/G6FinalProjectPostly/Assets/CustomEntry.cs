@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Text;
 using Xamarin.Forms;
 
-namespace G6FinalProjectPostly.Assests
+namespace G6FinalProjectPostly.CustomButtons
 {
-    class CustomEntityRender
+    public class CustomEntry: Entry
     {
 
     }

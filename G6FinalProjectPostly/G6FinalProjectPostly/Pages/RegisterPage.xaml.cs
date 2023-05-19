@@ -16,5 +16,10 @@ namespace G6FinalProjectPostly.Pages
         {
             InitializeComponent();
         }
+
+        private void LoginBtn_Tapped(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new MainPage());
+        }
     }
 }

@@ -2,13 +2,15 @@
 <ContentPage
     x:Class="G6FinalProjectPostly.MainPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:G6FinalProjectPostly.CustomButtons">
 
     <StackLayout
         Margin="0"
         BackgroundColor="White"
         HorizontalOptions="FillAndExpand"
         VerticalOptions="FillAndExpand">
+        <Image BackgroundColor="green" Source="logoutdex_lower" />
         <StackLayout
             Padding="0,150,0,0"
             HorizontalOptions="Center"
@@ -21,9 +23,9 @@
                     <RowDefinition Height="0.1*" />
                     <RowDefinition Height="*" />
                     <RowDefinition Height="*" />
-                    <RowDefinition Height="1*" />
-                    <RowDefinition Height="1*" />
-                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1.5*" />
+                    <RowDefinition Height="1.5*" />
+                    <RowDefinition Height="1.5*" />
                     <RowDefinition Height="*" />
                     <RowDefinition Height="3*" />
                     <RowDefinition Height="*" />
@@ -65,14 +67,14 @@
                     Grid.Row="3"
                     Grid.Column="1"
                     Margin="2"
-                    Padding="0,0,0,0"
+                    Padding="10,0,0,0"
                     BackgroundColor="#ececec"
                     CornerRadius="15">
-                    <Entry
+                    <local:CustomEntry
                         x:Name="usrEmail"
                         FontAttributes="Bold"
-                        FontFamily="Monsterrat"
-                        FontSize="12"
+                        FontFamily="Bold-Monsterrat"
+                        FontSize="14"
                         Placeholder="Email"
                         PlaceholderColor="Black" />
                 </Frame>
@@ -80,14 +82,14 @@
                     Grid.Row="4"
                     Grid.Column="1"
                     Margin="2"
-                    Padding="0,0,0,0"
+                    Padding="10,0,0,0"
                     BackgroundColor="#ececec"
                     CornerRadius="15">
-                    <Entry
+                    <local:CustomEntry
                         x:Name="usrPass"
                         FontAttributes="Bold"
-                        FontFamily="Monsterrat"
-                        FontSize="12"
+                        FontFamily="Bold-Monsterrat"
+                        FontSize="14"
                         IsPassword="True"
                         Placeholder="Password"
                         PlaceholderColor="Black" />
@@ -132,12 +134,12 @@
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span
-                                    FontSize="14"
+                                    FontSize="16"
                                     RelativeLayout.XConstraint="60"
                                     Text="Don't have an account? "
                                     TextColor="Black" />
                                 <Span
-                                    FontSize="14"
+                                    FontSize="16"
                                     RelativeLayout.XConstraint="60"
                                     Text="Sign Up Now!"
                                     TextColor="#fecc31" />
