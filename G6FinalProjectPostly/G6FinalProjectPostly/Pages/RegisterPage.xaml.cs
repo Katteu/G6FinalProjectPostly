@@ -9,12 +9,12 @@ using Xamarin.Forms.Xaml;
 
 namespace G6FinalProjectPostly.Pages
 {
-    /*[XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class TabbedPage : TabbedPage
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class RegisterPage : ContentPage
     {
-        public TabbedPage()
+        public RegisterPage()
         {
             InitializeComponent();
         }
-    }*/
+    }
 }

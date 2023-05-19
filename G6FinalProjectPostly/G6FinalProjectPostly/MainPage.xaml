@@ -1,24 +1,156 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="G6FinalProjectPostly.MainPage">
+<ContentPage
+    x:Class="G6FinalProjectPostly.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
-    <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
-        </Frame>
-        <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
-        <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
-        <Label FontSize="16" Padding="30,24,30,0">
-            <Label.FormattedText>
-                <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="Learn more at "/>
-                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
-                    </FormattedString.Spans>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
+    <StackLayout
+        Margin="0"
+        BackgroundColor="White"
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="FillAndExpand">
+        <StackLayout
+            Padding="0,150,0,0"
+            HorizontalOptions="Center"
+            VerticalOptions="Center">
+            <Image Source="loginletter" WidthRequest="300" />
+        </StackLayout>
+        <StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.1*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="1.2*" />
+                    <RowDefinition Height="1.2*" />
+                    <RowDefinition Height="1.2*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="3*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="7*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Frame
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Padding="0,0,0,0"
+                    BackgroundColor="Transparent"
+                    HorizontalOptions="Center">
+                    <Label
+                        x:Name="welcome"
+                        FontAttributes="Bold"
+                        FontFamily="ExtraBold-Monsterrat"
+                        FontSize="30"
+                        Text="Welcome to Postly!"
+                        TextColor="BLACk" />
+                </Frame>
+                <Frame
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Padding="0,0,0,0"
+                    BackgroundColor="Transparent"
+                    HorizontalOptions="Center">
+                    <Label
+                        FontAttributes="Bold"
+                        FontFamily="Monsterrat"
+                        FontSize="16"
+                        Text="One letter at a time"
+                        TextColor="Black" />
+                </Frame>
+                <Frame
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    Margin="2"
+                    Padding="0,0,0,0"
+                    BackgroundColor="#ececec"
+                    CornerRadius="15">
+                    <Entry
+                        x:Name="usrEmail"
+                        FontAttributes="Bold"
+                        FontFamily="Monsterrat"
+                        FontSize="12"
+                        Placeholder="Email"
+                        PlaceholderColor="Black" />
+                </Frame>
+                <Frame
+                    Grid.Row="4"
+                    Grid.Column="1"
+                    Margin="2"
+                    Padding="0,0,0,0"
+                    BackgroundColor="#ececec"
+                    CornerRadius="15">
+                    <Entry
+                        x:Name="usrPass"
+                        FontAttributes="Bold"
+                        FontFamily="Monsterrat"
+                        FontSize="12"
+                        IsPassword="True"
+                        Placeholder="Password"
+                        PlaceholderColor="Black" />
+                </Frame>
+                <Frame
+                    Grid.Row="5"
+                    Grid.Column="1"
+                    Padding="0,0,0,0"
+                    BackgroundColor="#fecc31"
+                    CornerRadius="15">
+                    <Button
+                        x:Name="SignUpButton"
+                        BackgroundColor="#fecc31"
+                        Clicked="SignUpButton_Clicked"
+                        Font="Large"
+                        FontFamily="Bold-Monsterrat"
+                        FontSize="20"
+                        Text="LOGIN" />
+                </Frame>
+                <Frame
+                    Grid.Row="6"
+                    Grid.Column="1"
+                    Margin="0,0,0,0"
+                    Padding="0,0,0,0"
+                    BackgroundColor="Transparent"
+                    CornerRadius="15">
+                    <Button
+                        x:Name="ForgotPassButton"
+                        BackgroundColor="Transparent"
+                        Clicked="ForgotPassButton_Clicked"
+                        FontSize="14"
+                        Text="Forgot Password?"
+                        TextColor="#fecc31" />
+                </Frame>
+                <Frame
+                    Grid.Row="8"
+                    Grid.Column="1"
+                    Padding="0,0,0,0"
+                    BackgroundColor="Transparent"
+                    HorizontalOptions="Center">
+                    <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span
+                                    FontSize="14"
+                                    RelativeLayout.XConstraint="60"
+                                    Text="Don't have an account? "
+                                    TextColor="Black" />
+                                <Span
+                                    FontSize="14"
+                                    RelativeLayout.XConstraint="60"
+                                    Text="Sign Up Now!"
+                                    TextColor="#fecc31" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="SignUpBtn" Tapped="SignUpBtn_Tapped" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Frame>
+            </Grid>
+        </StackLayout>
+
     </StackLayout>
 
 </ContentPage>

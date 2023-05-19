@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="G6FinalProjectPostly.Pages.RegisterPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ContentPage.Content>
+        <StackLayout
+            Margin="0"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand">
+            <StackLayout HorizontalOptions="End">
+                <Image
+                    RotationY="180"
+                    Source="logoutdes_upper"
+                    WidthRequest="250" />
+            </StackLayout>
+            <Grid Margin="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="0.5*" />
+                    <RowDefinition Height="1.5*" />
+                    <RowDefinition Height="1.5*" />
+                    <RowDefinition Height="1.5*" />
+                    <RowDefinition Height="1.5*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="7*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Image
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    BackgroundColor="Green"
+                    Source="bubbles"
+                    WidthRequest="0" />
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    BackgroundColor="Blue"
+                    FontFamily="ExtraBold-Monsterrat"
+                    FontSize="30"
+                    Text="Create an Account"
+                    TextColor="Black" />
+                <Label
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    BackgroundColor="Pink"
+                    FontFamily="Monsterrat"
+                    FontSize="18"
+                    Text="Join the experience!"
+                    TextColor="Black" />
+                <Frame
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    Margin="10"
+                    Padding="25,0,25,0"
+                    CornerRadius="50"
+                    HeightRequest="60">
+                    <Entry x:Name="username" Placeholder="Username" />
+                </Frame>
+                <Frame
+                    Grid.Row="4"
+                    Grid.Column="1"
+                    Margin="10"
+                    Padding="25,0,25,0"
+                    CornerRadius="50"
+                    HeightRequest="60">
+                    <Entry Placeholder="Email Address" />
+                </Frame>
+                <Frame
+                    Grid.Row="5"
+                    Grid.Column="1"
+                    Margin="10"
+                    Padding="25,0,25,0"
+                    CornerRadius="50"
+                    HeightRequest="60">
+                    <Entry Placeholder="Password" />
+                </Frame>
+                <Frame
+                    Grid.Row="6"
+                    Grid.Column="1"
+                    Margin="10"
+                    Padding="25,0,25,0"
+                    CornerRadius="50"
+                    HeightRequest="60">
+                    <Entry Placeholder="Confirm Password" />
+                </Frame>
+                <Label
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Welcome to The Registration Page!"
+                    VerticalOptions="CenterAndExpand" />
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
