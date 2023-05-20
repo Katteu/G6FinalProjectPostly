@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-[assembly: ExportFont("Montserrat-VariableFont_wght.ttf", Alias ="Monsterrat")]
+[assembly: ExportFont("Montserrat-Regular.ttf", Alias ="Monsterrat")]
 [assembly: ExportFont("Montserrat-Bold.ttf", Alias = "Bold-Monsterrat")]
 [assembly: ExportFont("Montserrat-ExtraBold.ttf", Alias = "ExtraBold-Monsterrat")]
 namespace G6FinalProjectPostly
@@ -38,7 +38,7 @@ namespace G6FinalProjectPostly
 
         private void ForgotPassButton_Clicked(object sender, EventArgs e)
         {
-
+            Navigation.PushAsync(new AccountsPage());
         }
     }
 }

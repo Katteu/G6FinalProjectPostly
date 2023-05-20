@@ -9,6 +9,9 @@
             <x:String x:Key="Lock_closed">&#xe899;</x:String>
             <x:String x:Key="Lock_open">&#xe898;</x:String>
             <x:String x:Key="Email_Icon">&#xe0e1;</x:String>
+            <x:String x:Key="Arrow_right">&#xe5e1;</x:String>
+            <x:String x:Key="Logout_Icon">&#xe9ba;</x:String>
+            <x:String x:Key="SentEmail_Icon">&#xf187;</x:String>
         </ResourceDictionary>
 
     </Application.Resources>

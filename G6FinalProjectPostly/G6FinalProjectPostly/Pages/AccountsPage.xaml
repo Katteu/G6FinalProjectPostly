@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="G6FinalProjectPostly.Pages.AccountsPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="White">
+            <StackLayout
+                Padding="0"
+                BackgroundColor="#fecc31"
+                WidthRequest="80">
+                <RelativeLayout HeightRequest="170">
+                    <Label
+                        FontFamily="ExtraBold-Monsterrat"
+                        FontSize="35"
+                        RelativeLayout.XConstraint="100"
+                        RelativeLayout.YConstraint="30"
+                        Text="Account Profile"
+                        TextColor="Black" />
+                    <Image
+                        RelativeLayout.XConstraint="165"
+                        RelativeLayout.YConstraint="90"
+                        Source="userprof"
+                        WidthRequest="150" />
+                </RelativeLayout>
+            </StackLayout>
+            <StackLayout BackgroundColor="Transparent" HeightRequest="700">
+                <Frame
+                    Margin="0,70,0,0"
+                    Padding="0"
+                    BackgroundColor="Transparent"
+                    HeightRequest="30"
+                    HorizontalOptions="Center">
+                    <Label
+                        x:Name="user_nameprof"
+                        BackgroundColor="Transparent"
+                        FontFamily="Bold-Monsterrat"
+                        FontSize="25"
+                        Text="John Doe"
+                        TextColor="Black" />
+                </Frame>
+                <Frame
+                    Padding="0"
+                    BackgroundColor="Transparent"
+                    HeightRequest="30"
+                    HorizontalOptions="Center">
+                    <Label
+                        x:Name="user_emailprof"
+                        BackgroundColor="Transparent"
+                        FontFamily="Monsterrat"
+                        FontSize="20"
+                        Text="johndoe@gmail.com"
+                        TextColor="Black" />
+                </Frame>
+                <Frame
+                    Margin="0,10,0,0"
+                    Padding="0"
+                    BackgroundColor="Transparent"
+                    HeightRequest="100">
+                    <RelativeLayout BackgroundColor="Transparent">
+                        <Frame
+                            Padding="5"
+                            BackgroundColor="LightGray"
+                            CornerRadius="2"
+                            RelativeLayout.XConstraint="40"
+                            RelativeLayout.YConstraint="30">
+                            <Label
+                                FontFamily="MaterialIcons-Regular"
+                                FontSize="40"
+                                Text="{StaticResource SentEmail_Icon}"
+                                TextColor="Black" />
+                        </Frame>
+                        <Label
+                            BackgroundColor="Transparent"
+                            FontFamily="Monsterrat"
+                            FontSize="25"
+                            RelativeLayout.XConstraint="110"
+                            RelativeLayout.YConstraint="35"
+                            Text="Sent Letters"
+                            TextColor="Black" />
+                        <Button
+                            x:Name="SentLetterBtn"
+                            Padding="0"
+                            BackgroundColor="Transparent"
+                            Clicked="SentLetterBtn_Clicked"
+                            FontFamily="MaterialIcons-Regular"
+                            FontSize="50"
+                            RelativeLayout.XConstraint="390"
+                            RelativeLayout.YConstraint="20"
+                            Text="{StaticResource Arrow_right}"
+                            TextColor="Black" />
+                        <Label Text="__________________________________________________________________" RelativeLayout.YConstraint="90" RelativeLayout.XConstraint="40" TextColor="LightGray"/>
+                    </RelativeLayout>
+                </Frame>
+                <Frame
+                    Margin="0,-6,0,0"
+                    Padding="0"
+                    BackgroundColor="Transparent"
+                    HeightRequest="100">
+                    <RelativeLayout BackgroundColor="Transparent">
+                        <Frame
+                            Padding="5"
+                            BackgroundColor="LightGray"
+                            CornerRadius="2"
+                            RelativeLayout.XConstraint="40"
+                            RelativeLayout.YConstraint="30">
+                            <Label
+                                FontFamily="MaterialIcons-Regular"
+                                FontSize="40"
+                                Text="{StaticResource Logout_Icon}"
+                                TextColor="Black" />
+                        </Frame>
+                        <Label
+                            BackgroundColor="Transparent"
+                            FontFamily="Monsterrat"
+                            FontSize="25"
+                            RelativeLayout.XConstraint="110"
+                            RelativeLayout.YConstraint="35"
+                            Text="Log Out"
+                            TextColor="Black" />
+                        <Button
+                            x:Name="LogoutBtn"
+                            Padding="0"
+                            BackgroundColor="Transparent"
+                            Clicked="LogoutBtn_Clicked"
+                            FontFamily="MaterialIcons-Regular"
+                            FontSize="50"
+                            RelativeLayout.XConstraint="390"
+                            RelativeLayout.YConstraint="20"
+                            Text="{StaticResource Arrow_right}"
+                            TextColor="Black" />
+                    </RelativeLayout>
+                </Frame>
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
