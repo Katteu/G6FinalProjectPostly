@@ -65,11 +65,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DependencyServices\" />
-    <Folder Include="Models\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <Compile Update="Pages\Mailbox\ViewInbox.xaml.cs">
+      <DependentUpon>ViewInbox.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Pages\Navigation\MainFlyoutPage.xaml.cs">
       <DependentUpon>MainFlyoutPage.xaml</DependentUpon>
     </Compile>
@@ -77,6 +75,12 @@
 
   <ItemGroup>
     <EmbeddedResource Update="Pages\InboxLetter.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\Mailbox\EditLetter.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\Mailbox\ViewLetter.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Pages\Navigation\FlyoutMenuPage.xaml">

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="G6FinalProjectPostly.Pages.Mailbox.ViewLetter">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="9*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+            </Grid>
+            <StackLayout  Orientation="Horizontal">
+            <Label Grid.Column="0" Grid.Row="0" x:Name="subjLabel" Text="Happy Memories" Padding="15,0,0,0" FontFamily="MontExtraBold" HorizontalOptions="CenterAndExpand" TextColor="Black" FontSize="25"/>
+                <Label Grid.Column="1" Grid.Row="0" Text="&#xe5cd;" FontSize="25" FontFamily="RegularMaterial" Margin="0,0,15,0" HorizontalOptions="End" VerticalOptions="Center">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="back_Tapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
+            <BoxView HeightRequest="0.5" BackgroundColor="Gray" Opacity="0.4" Margin="10,0,10,0" />
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="4*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Margin="0,10,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="8*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="3*"/>
+                        <RowDefinition Height="3*"/>
+                        <RowDefinition Height="3*"/>
+                    </Grid.RowDefinitions>
+                    <Image Source="yellowIcon.png" Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" Margin="15,-10,0,0"/>
+                    <StackLayout Grid.Column="1" Grid.Row="0" Orientation="Horizontal">
+                    <Label x:Name="from" Text="John Doe" FontFamily="MontBold" TextColor="Black" />
+                    <Label x:Name="email" HorizontalOptions="Start" VerticalOptions="Center" TextColor="#828282" 
+                           FontFamily="MontBold" FontSize="11.5" Text="&lt;johndoe@gmail.com>"/>
+                    </StackLayout>
+                    <Label x:Name="toLabel" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1"  FontFamily="MontBold" 
+                           FontSize="12.5" Margin="0,-5,0,0"/>
+                    <Label x:Name="dateLabel" Grid.Column="1" Grid.Row="2" FontFamily="MontReg" TextColor="Black" FontSize="10" 
+                           Margin="0,-10,0,0"/>
+                </Grid>
+                <Label Grid.Row="1" x:Name="letterLabel" Margin="15,0,15,0" FontFamily="MontMed" TextColor="Black"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

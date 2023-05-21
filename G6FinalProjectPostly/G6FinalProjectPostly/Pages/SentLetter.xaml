@@ -14,9 +14,81 @@
     </NavigationPage.TitleView>
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Sent Letter!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <StackLayout x:Name="listContainer">
+            <!--Start of List-->
+            <ListView x:Name="letterListView" HasUnevenRows="true" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid x:Name="back" BackgroundColor="White" >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1.8*"/>
+                                    <ColumnDefinition Width="5*"/>
+                                    <ColumnDefinition Width="1*"/>
+                                    <ColumnDefinition Width="1*"/>
+                                    <ColumnDefinition Width="1.2*"/>
+                                </Grid.ColumnDefinitions>
+                                <!--<Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>-->
+                                <Label ClassId="{Binding id}" x:Name="mailIcon" Text="&#xf18a;" FontSize="42" Grid.Column="0" FontFamily="OutlinedMaterial" TextColor="Black"
+                                       HorizontalOptions="Center" VerticalOptions="Center">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="change_Clicked"/>
+                                    </Label.GestureRecognizers>
+                                    <Label.Triggers>
+                                        <DataTrigger TargetType="Label" Binding="{Binding isRead}" Value="true">
+                                            <Setter Property="Text" Value="&#xf18c;"/>
+                                        </DataTrigger>
+                                    </Label.Triggers>
+                                </Label>
+                                <StackLayout Grid.Column="1" >
+                                    <Label Text="{Binding to, StringFormat='To {0}'}" TextColor="Black" FontSize="18" FontFamily="MontExtraBold"  Padding="0,10,0,0" Margin="0">
+                                        <Label.Triggers>
+                                            <DataTrigger TargetType="Label" Binding="{Binding isRead}" Value="true">
+                                                <Setter Property="FontFamily" Value="MontBold" />
+                                            </DataTrigger>
+                                        </Label.Triggers>
+                                    </Label>
+                                    <Label Text="{Binding subject}" TextColor="Black" FontSize="16" FontFamily="MontReg" Margin="0,-10,0,0" />
+                                    <Label Text="{Binding date}" TextColor="Orange" FontSize="11" FontFamily="MontReg" Margin="0,-5,0,10"/>
+                                </StackLayout>
+                                <Label ClassId="{Binding id}"  Text="&#xe8f4;" TextColor="Black" FontFamily="OutlinedMaterial" HorizontalOptions="Center" 
+                                       VerticalOptions="Center" FontSize="30" Grid.Column="2">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="viewLetter_Tapped"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <Label ClassId="{Binding id}" Text="&#xe3c9;" TextColor="Black" FontFamily="OutlinedMaterial" HorizontalOptions="Center" 
+                                       VerticalOptions="Center" FontSize="30" Grid.Column="3">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="editLetter_Tapped"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <Label ClassId="{Binding id}" Text="&#xe872;" TextColor="Black" FontFamily="OutlinedMaterial" HorizontalOptions="Center" 
+                                       VerticalOptions="Center" FontSize="30" Grid.Column="4" Padding="0,0,21,0">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="deleteLetter_Tapped"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            </StackLayout>
+            <StackLayout x:Name="altContainer" HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+                <Image Source="postman.png" Aspect="AspectFit"/>
+                <Label Text="No sent letters. Add now!" FontFamily="MontMed" Margin="0,0,0,0"/>
+                <Frame BackgroundColor="#fecc31" CornerRadius="150" Padding="0" Margin="50,0">
+                    <Label Text="+" FontFamily="MontBold" TextColor="Black" FontSize="30" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnFrameTapped" />
+                    </Frame.GestureRecognizers>
+                </Frame>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

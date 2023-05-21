@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="CustomRenderers\BorderlessEditorRenderer.cs" />
     <Compile Include="CustomRenderers\BorderlessRenderer.cs" />
+    <Compile Include="DependencyServices\AndroidToast.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -122,6 +123,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\homebanner.png" />
+    <AndroidResource Include="Resources\drawable\yellowIcon.png" />
+    <AndroidResource Include="Resources\drawable\postman.png" />
+    <AndroidResource Include="Resources\drawable\postbye.png" />
     <!--<AndroidResource Include="Resources\drawable-hdpi\homebanner.png" />
     <AndroidResource Include="Resources\drawable-mdpi\homebanner.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\homebanner.png" />-->
@@ -146,6 +150,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\layout\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\applogo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

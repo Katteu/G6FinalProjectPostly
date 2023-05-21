@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:G6FinalProjectPostly.CustomRenderers"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="G6FinalProjectPostly.Pages.HomePage">
     <ContentPage.Content>
         <StackLayout>
@@ -36,11 +36,11 @@
                                FontFamily="MontBold" FontSize="18" TextColor="#fecc31" 
                               HorizontalTextAlignment="Center" Margin="0,30,0,0" FontAttributes="Bold"/>
                         <!--Icons-->
-                        <Label Grid.Row="1" Grid.Column="0" Text="&#xf0d2;" FontFamily="RegularMaterial" 
+                        <Label x:Name="label1" Grid.Row="1" Grid.Column="0" Text="&#xf0d2;" FontFamily="RegularMaterial" 
                                TextColor="Black" FontSize="50" HorizontalTextAlignment="Center" Padding="30,25,0,0"/>
-                        <Label Grid.Row="1" Grid.Column="1" Text="&#xe9bc;" FontFamily="OutlinedMaterial" 
+                        <Label x:Name="label2" Grid.Row="1" Grid.Column="1" Text="&#xe9bc;" FontFamily="OutlinedMaterial" 
                                TextColor="Black" FontSize="50" HorizontalTextAlignment="Center" Padding="0,25,0,0"/>
-                        <Label Grid.Row="1" Grid.Column="2" Text="&#xe745;" FontFamily="OutlinedMaterial" 
+                        <Label x:Name="label3" Grid.Row="1" Grid.Column="2" Text="&#xe745;" FontFamily="OutlinedMaterial" 
                                TextColor="Black" FontSize="50" HorizontalTextAlignment="Center" Padding="0,25,30,0"/>
                         <!--Icon Caption-->
                         <Label Grid.Row="2" Grid.Column="0" Text="Send a letter" FontFamily="MontSemiBold" 
@@ -59,7 +59,7 @@
                                 </Frame.GestureRecognizers>
                                 <Button Style="{x:StaticResource NoDefaultCapsButton}" Text="✎ Compose Letter" 
                                          BorderColor="Transparent" BackgroundColor="Transparent" FontSize="18"
-                                         Padding="0" Margin="0" FontFamily="MontBold" />
+                                         Padding="0" Margin="0" FontFamily="MontBold" Clicked="OnFrameTapped"/>
                             </Frame>
                         </StackLayout>
                     </Grid>

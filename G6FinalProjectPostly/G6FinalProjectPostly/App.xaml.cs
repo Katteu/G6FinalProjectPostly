@@ -12,6 +12,7 @@ using Xamarin.Forms.Xaml;
 [assembly: ExportFont("MontserratSemiBold.ttf", Alias = "MontSemiBold")]
 [assembly: ExportFont("MontserratExtraBold.ttf", Alias = "MontExtraBold")]
 [assembly: ExportFont("MontserratMedium.ttf", Alias = "MontMed")]
+[assembly: ExportFont("MontserratThin.ttf", Alias = "MontThin")]
 
 namespace G6FinalProjectPostly
 {
@@ -22,7 +23,7 @@ namespace G6FinalProjectPostly
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new G6FinalProjectPostly.Pages.PostlyTabbedPage());  
+            MainPage = new NavigationPage(new G6FinalProjectPostly.Pages.PostlyTabbedPage());
         }
 
         protected override void OnStart()
