@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="G6FinalProjectPostly.Pages.PostlyTabbedPage"
+            xmlns:local="clr-namespace:G6FinalProjectPostly.Pages"
+            xmlns:page="clr-namespace:G6FinalProjectPostly.Pages.Navigation"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            NavigationPage.HasNavigationBar="False"
+            BarBackgroundColor="Black"
+            SelectedTabColor="#fecc31"
+            UnselectedTabColor="White">
+
+    <local:HomePage Title="Home" IconImageSource="HomeIcon"/>
+    <local:ComposePage Title="Compose" IconImageSource="PencilIcon"/>
+    <page:MainFlyoutPage Title="Mailbox" IconImageSource="MailIcon"/>
+    <local:ProfilePage Title="Profile" IconImageSource="UserIcon"/>
+    
+</TabbedPage>

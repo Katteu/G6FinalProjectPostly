@@ -25,4 +25,6 @@ namespace G6FinalProjectPostly.Droid
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
     }
+
+
 }

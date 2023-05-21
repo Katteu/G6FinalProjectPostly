@@ -5,16 +5,19 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
 using Xamarin.Forms.Xaml;
 
 namespace G6FinalProjectPostly.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class TabbedPage : TabbedPage
+    public partial class PostlyTabbedPage : Xamarin.Forms.TabbedPage
     {
-        public TabbedPage()
+        public PostlyTabbedPage()
         {
             InitializeComponent();
+            //On<Android>().SetToolbarPlacement(ToolbarPlacement.Bottom);
         }
     }
 }

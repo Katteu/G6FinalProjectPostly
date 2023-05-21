@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="G6FinalProjectPostly.Pages.SentLetter">
+    <NavigationPage.TitleView>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="4.2*" />
+                <ColumnDefinition Width="5.8*" />
+            </Grid.ColumnDefinitions>
+            <Label Text="Sent Letters" Grid.Column="0" FontSize="20" FontFamily="MontExtraBold" TextColor="Black" HorizontalOptions="Start"/>
+            <Image Source="SendIcon.png" Grid.Column="1" HeightRequest="20" WidthRequest="20" HorizontalOptions="Start"/>
+        </Grid>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Sent Letter!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

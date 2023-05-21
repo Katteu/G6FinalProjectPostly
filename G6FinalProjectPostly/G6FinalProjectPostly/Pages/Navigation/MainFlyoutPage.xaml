@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FlyoutPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="G6FinalProjectPostly.Pages.Navigation.MainFlyoutPage"
+             xmlns:local="clr-namespace:G6FinalProjectPostly.Pages.Navigation"
+             xmlns:pages="clr-namespace:G6FinalProjectPostly.Pages">
+    <FlyoutPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="NavigationPage" BasedOn="{StaticResource CustomNavigationPageStyle}" />
+        </ResourceDictionary>
+    </FlyoutPage.Resources>
+    <FlyoutPage.Flyout>
+        <local:FlyoutMenuPage x:Name="flyout"/>
+    </FlyoutPage.Flyout>
+    <FlyoutPage.Detail>
+        <NavigationPage>
+            <x:Arguments>
+                <pages:SentLetter/>
+            </x:Arguments>
+        </NavigationPage>
+    </FlyoutPage.Detail>
+</FlyoutPage>
+    

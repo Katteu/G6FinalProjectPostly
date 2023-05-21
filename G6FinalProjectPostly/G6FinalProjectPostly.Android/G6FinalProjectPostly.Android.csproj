@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -33,6 +33,11 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidLinkMode>None</AndroidLinkMode>
+    <AotAssemblies>false</AotAssemblies>
+    <EnableLLVM>false</EnableLLVM>
+    <AndroidEnableProfiledAot>false</AndroidEnableProfiledAot>
+    <BundleAssemblies>false</BundleAssemblies>
+    <EmbedAssembliesIntoApk>false</EmbedAssembliesIntoApk>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -58,6 +63,8 @@
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomRenderers\BorderlessEditorRenderer.cs" />
+    <Compile Include="CustomRenderers\BorderlessRenderer.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -82,9 +89,42 @@
     <AndroidResource Include="Resources\mipmap-xxhdpi\launcher_foreground.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\HomeIcon.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\HomeIcon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\HomeIcon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\HomeIcon.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\HomeIcon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\PencilIcon.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\PencilIcon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\PencilIcon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\PencilIcon.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\PencilIcon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\MailIcon.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\MailIcon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\MailIcon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\MailIcon.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\MailIcon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\UserIcon.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\UserIcon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\UserIcon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\UserIcon.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\UserIcon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\InboxIcon.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\InboxIcon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\InboxIcon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\InboxIcon.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\InboxIcon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\SendIcon.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\SendIcon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\SendIcon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\SendIcon.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\SendIcon.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\drawable\" />
+    <AndroidResource Include="Resources\drawable\homebanner.png" />
+    <!--<AndroidResource Include="Resources\drawable-hdpi\homebanner.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\homebanner.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\homebanner.png" />-->
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\G6FinalProjectPostly\G6FinalProjectPostly.csproj">
@@ -92,5 +132,20 @@
       <Name>G6FinalProjectPostly</Name>
     </ProjectReference>
   </ItemGroup>
- <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\tab_background.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\tab_background_selected.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\tab_background_unselected.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\cursor.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\layout\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

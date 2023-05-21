@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="G6FinalProjectPostly.Pages.Navigation.FlyoutMenuPage"
+             xmlns:local="clr-namespace:G6FinalProjectPostly.Pages.Navigation"
+             xmlns:page ="clr-namespace:G6FinalProjectPostly.Pages"
+             Title="FlyoutMenu">
+    <StackLayout>
+        <StackLayout BackgroundColor="#fecc31" HeightRequest="150" >
+            <Label Text=" Mailbox Menu" FontFamily="MontBlack" FontSize="28" TextColor="Black" 
+                   VerticalOptions="End" Padding="0,100,0,0"/>
+        </StackLayout>
+        <ListView x:Name="listview" x:FieldModifier="public">
+            <ListView.ItemsSource>
+                <x:Array Type="{x:Type local:FlyoutMenuItem}">
+                    <local:FlyoutMenuItem Title="Sent Letters" IconSource="SendIcon" TargetPage="{x:Type page:SentLetter}"/>
+                    <local:FlyoutMenuItem Title="Inbox" IconSource="InboxIcon" TargetPage="{x:Type page:InboxLetter}"/>
+                </x:Array>
+            </ListView.ItemsSource>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1.2*"/>
+                                <ColumnDefinition Width="8.8
+                                                  *"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Source="{Binding IconSource}" HorizontalOptions="End"/>
+                            <Label Grid.Column="1" FontFamily="MontReg" TextColor="Black" HorizontalOptions="Start" FontSize="18" Margin="0,8,0,0" Text="{Binding Title}" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

@@ -11,17 +11,86 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Fonts\MaterialIconsOutlined-Regular.otf" />
+    <None Remove="Fonts\MaterialIconsRegular.ttf" />
+    <None Remove="Fonts\MaterialIconsTwoTone.otf" />
+    <None Remove="Fonts\MontserratBlack.ttf" />
+    <None Remove="Fonts\MontserratBlackItalic.ttf" />
+    <None Remove="Fonts\MontserratBold.ttf" />
+    <None Remove="Fonts\MontserratBoldItalic.ttf" />
+    <None Remove="Fonts\MontserratExtraBold.ttf" />
+    <None Remove="Fonts\MontserratExtraBoldItalic.ttf" />
+    <None Remove="Fonts\MontserratExtraLight.ttf" />
+    <None Remove="Fonts\MontserratExtraLightItalic.ttf" />
+    <None Remove="Fonts\MontserratItalic.ttf" />
+    <None Remove="Fonts\MontserratLight.ttf" />
+    <None Remove="Fonts\MontserratLightItalic.ttf" />
+    <None Remove="Fonts\MontserratMedium.ttf" />
+    <None Remove="Fonts\MontserratMediumItalic.ttf" />
+    <None Remove="Fonts\MontserratRegular - Copy.ttf" />
+    <None Remove="Fonts\MontserratRegular.ttf" />
+    <None Remove="Fonts\MontserratSemiBold.ttf" />
+    <None Remove="Fonts\MontserratSemiBoldItalic.ttf" />
+    <None Remove="Fonts\MontserratThin.ttf" />
+    <None Remove="Fonts\MontserratThinItalic.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Fonts\MaterialIconsOutlined-Regular.otf" />
+    <EmbeddedResource Include="Fonts\MaterialIconsRegular.ttf" />
+    <EmbeddedResource Include="Fonts\MaterialIconsTwoTone.otf" />
+    <EmbeddedResource Include="Fonts\MontserratBlack.ttf" />
+    <EmbeddedResource Include="Fonts\MontserratBlackItalic.ttf" />
+    <EmbeddedResource Include="Fonts\MontserratBold.ttf" />
+    <EmbeddedResource Include="Fonts\MontserratBoldItalic.ttf" />
+    <EmbeddedResource Include="Fonts\MontserratExtraBold.ttf" />
+    <EmbeddedResource Include="Fonts\MontserratExtraBoldItalic.ttf" />
+    <EmbeddedResource Include="Fonts\MontserratExtraLight.ttf" />
+    <EmbeddedResource Include="Fonts\MontserratExtraLightItalic.ttf" />
+    <EmbeddedResource Include="Fonts\MontserratItalic.ttf" />
+    <EmbeddedResource Include="Fonts\MontserratLight.ttf" />
+    <EmbeddedResource Include="Fonts\MontserratLightItalic.ttf" />
+    <EmbeddedResource Include="Fonts\MontserratMedium.ttf" />
+    <EmbeddedResource Include="Fonts\MontserratMediumItalic.ttf" />
+    <EmbeddedResource Include="Fonts\MontserratRegular.ttf" />
+    <EmbeddedResource Include="Fonts\MontserratSemiBold.ttf" />
+    <EmbeddedResource Include="Fonts\MontserratSemiBoldItalic.ttf" />
+    <EmbeddedResource Include="Fonts\MontserratThin.ttf" />
+    <EmbeddedResource Include="Fonts\MontserratThinItalic.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="DependencyServices\" />
-    <Folder Include="Fonts\" />
     <Folder Include="Models\" />
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Pages\Navigation\MainFlyoutPage.xaml.cs">
+      <DependentUpon>MainFlyoutPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Pages\InboxLetter.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\Navigation\FlyoutMenuPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\Navigation\MainFlyoutPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\ProfilePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\SentLetter.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Pages\TabbedPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

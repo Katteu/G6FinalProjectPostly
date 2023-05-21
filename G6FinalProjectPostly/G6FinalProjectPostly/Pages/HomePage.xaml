@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:G6FinalProjectPostly.CustomRenderers"
+             x:Class="G6FinalProjectPostly.Pages.HomePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="5*"/>
+                    <RowDefinition Height="5*"/>
+                </Grid.RowDefinitions>
+                <StackLayout Grid.Row="0" BackgroundColor="#fecc31" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Padding="10,0">
+                    <Label Text="WELCOME TO POSTLY!" FontFamily="MontBlack" FontSize="30" TextColor="Black" 
+                           HorizontalTextAlignment="Center" Padding="0,25,0,0" />
+                    <Label Text="Connect with others through Postly - where words unite!" FontFamily="MontReg" 
+                           TextColor="Black" HorizontalTextAlignment="Center" FontSize="16" Padding="10,7,10,20" />
+                    <StackLayout BackgroundColor="#fecc31" Padding="18,0,18,2"
+                                 VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                        <Image Source="homebanner" Aspect="AspectFill"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Grid.Row="1">
+                    <Grid Padding="0" Margin="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="2*"/>
+                            <RowDefinition Height="3*"/>
+                            <RowDefinition Height="2*"/>
+                            <RowDefinition Height="3*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="3*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Row="0" Grid.ColumnSpan="3" Text="What can you do with Postly?" 
+                               FontFamily="MontBold" FontSize="18" TextColor="#fecc31" 
+                              HorizontalTextAlignment="Center" Margin="0,30,0,0" FontAttributes="Bold"/>
+                        <!--Icons-->
+                        <Label Grid.Row="1" Grid.Column="0" Text="&#xf0d2;" FontFamily="RegularMaterial" 
+                               TextColor="Black" FontSize="50" HorizontalTextAlignment="Center" Padding="30,25,0,0"/>
+                        <Label Grid.Row="1" Grid.Column="1" Text="&#xe9bc;" FontFamily="OutlinedMaterial" 
+                               TextColor="Black" FontSize="50" HorizontalTextAlignment="Center" Padding="0,25,0,0"/>
+                        <Label Grid.Row="1" Grid.Column="2" Text="&#xe745;" FontFamily="OutlinedMaterial" 
+                               TextColor="Black" FontSize="50" HorizontalTextAlignment="Center" Padding="0,25,30,0"/>
+                        <!--Icon Caption-->
+                        <Label Grid.Row="2" Grid.Column="0" Text="Send a letter" FontFamily="MontSemiBold" 
+                               TextColor="Black" FontSize="13" HorizontalTextAlignment="Center" Padding="30,0,0,0"/>
+                        <Label Grid.Row="2" Grid.Column="1" Text="Read letters" FontFamily="MontSemiBold" 
+                               TextColor="Black" FontSize="13" HorizontalTextAlignment="Center"/>
+                        <Label Grid.Row="2" Grid.Column="2" Text="Modify letters" FontFamily="MontSemiBold" 
+                               TextColor="Black" FontSize="13" HorizontalTextAlignment="Center" Padding="0,0,30,0"/>
+                        <!--Button Area-->
+                        <StackLayout Grid.Row="3" Grid.ColumnSpan="3" Padding="0,4,0,0">
+                            <Label Text="Start composing a letter now!" FontFamily="MontExtraBold" 
+                               TextColor="black" FontSize="20" HorizontalTextAlignment="Center" />
+                            <Frame Style="{StaticResource YiloButton}" Padding="0" Margin="30,0">
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnFrameTapped" />
+                                </Frame.GestureRecognizers>
+                                <Button Style="{x:StaticResource NoDefaultCapsButton}" Text="✎ Compose Letter" 
+                                         BorderColor="Transparent" BackgroundColor="Transparent" FontSize="18"
+                                         Padding="0" Margin="0" FontFamily="MontBold" />
+                            </Frame>
+                        </StackLayout>
+                    </Grid>
+
+                </StackLayout>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
