@@ -14,7 +14,7 @@
     </NavigationPage.TitleView>
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout x:Name="listContainer">
+            <StackLayout x:Name="listContainer" IsVisible="false">
             <!--Start of List-->
             <ListView x:Name="letterListView" HasUnevenRows="true" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
                 <ListView.ItemTemplate>
@@ -79,7 +79,7 @@
                 </ListView.ItemTemplate>
             </ListView>
             </StackLayout>
-            <StackLayout x:Name="altContainer" HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+            <StackLayout x:Name="altContainer" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" IsVisible="true">
                 <Image Source="postman.png" Aspect="AspectFit"/>
                 <Label Text="No sent letters. Add now!" FontFamily="MontMed" Margin="0,0,0,0"/>
                 <Frame BackgroundColor="#fecc31" CornerRadius="150" Padding="0" Margin="50,0">

@@ -24,21 +24,19 @@ namespace G6FinalProjectPostly.Pages
 
         public SentLetter (string to, string subject, string date, string letter)
 		{
-            DataRepository.letterList.Add(new LetterModel() { id = DataRepository.letterList.Count, to = to, subject = subject, date=date, letter=letter, isRead = false });
+            DataRepository.letterList.Add(new LetterModel() { id = DataRepository.letterList.Count, to = to, subject = subject, date = date, letter = letter, isRead = false });
             InitializeComponent ();
+            letterListView.ItemsSource = DataRepository.letterList;
             UpdateAlternativeContentVisibility();
         }
 
         private void OnFrameTapped(object sender, EventArgs e)
         {
-            // Get the instance of PostlyTabbedPage (replace "App.Current.MainPage" with your actual instance)
             var navigationPage = App.Current.MainPage as NavigationPage;
             var tabbedPage = navigationPage.RootPage as PostlyTabbedPage;
 
-            // Find the desired page within the TabbedPage
             var targetPage = tabbedPage.Children.FirstOrDefault(page => page is ComposePage);
 
-            // Set the active page to the desired page
             if (targetPage != null)
             {
                 tabbedPage.CurrentPage = targetPage;
@@ -119,7 +117,7 @@ namespace G6FinalProjectPostly.Pages
 
         private void UpdateAlternativeContentVisibility()
         {
-            if (letterListView.ItemsSource == null || !letterListView.ItemsSource.Cast<object>().Any())
+            if (DataRepository.letterList.Count==0)
             {
                 listContainer.IsVisible = false;
                 altContainer.IsVisible = true;
