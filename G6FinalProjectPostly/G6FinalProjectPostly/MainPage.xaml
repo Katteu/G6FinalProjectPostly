@@ -12,24 +12,24 @@
         VerticalOptions="FillAndExpand">
         <Image BackgroundColor="green" Source="logoutdex_lower" />
         <StackLayout
-            Padding="0,150,0,0"
+            Padding="0,70,0,0"
             HorizontalOptions="Center"
             VerticalOptions="Center">
-            <Image Source="loginletter" WidthRequest="300" />
+            <Image Source="loginletter" WidthRequest="230" />
         </StackLayout>
         <StackLayout>
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="0.1*" />
+                    <RowDefinition Height="2*" />
                     <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="1.5*" />
-                    <RowDefinition Height="1.5*" />
-                    <RowDefinition Height="1.5*" />
+                    <RowDefinition Height="2.5*" />
+                    <RowDefinition Height="2.5*" />
+                    <RowDefinition Height="2.5*" />
                     <RowDefinition Height="*" />
                     <RowDefinition Height="3*" />
                     <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
+                    <RowDefinition Height="1*" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
@@ -129,6 +129,7 @@
                     Grid.Column="1"
                     Padding="0,0,0,0"
                     BackgroundColor="Transparent"
+                    HeightRequest="20"
                     HorizontalOptions="Center">
                     <Label>
                         <Label.FormattedText>

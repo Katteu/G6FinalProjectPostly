@@ -15,11 +15,22 @@ namespace G6FinalProjectPostly.Pages
         public AccountsPage()
         {
             InitializeComponent();
+            if (Application.Current.Properties.ContainsKey("email"))
+            {
+                var email = Application.Current.Properties["email"].ToString();
+                user_emailprof.Text = email;
+                
+            }
+            if(Application.Current.Properties.ContainsKey("name")) 
+            {
+                var name = Application.Current.Properties["name"].ToString();
+                user_nameprof.Text = name;
+            }
         }
 
         private void SentLetterBtn_Clicked(object sender, EventArgs e)
         {
-
+            //Butang imong code diri kath ahak
         }
 
         private void LogoutBtn_Clicked(object sender, EventArgs e)

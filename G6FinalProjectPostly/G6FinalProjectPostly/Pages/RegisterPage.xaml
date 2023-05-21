@@ -15,18 +15,18 @@
                 <Image
                     RotationY="180"
                     Source="logoutdes_upper"
-                    WidthRequest="250" />
+                    WidthRequest="150" />
             </StackLayout>
             <Grid Margin="0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="0.8*" />
+                    <RowDefinition Height="0.8*" />
                     <RowDefinition Height="0.5*" />
-                    <RowDefinition Height="0.5*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
+                    <RowDefinition Height="1.2*" />
+                    <RowDefinition Height="1.2*" />
+                    <RowDefinition Height="1.2*" />
+                    <RowDefinition Height="1.2*" />
+                    <RowDefinition Height="1.4*" />
                     <RowDefinition Height="*" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="*" />
@@ -42,7 +42,7 @@
                     Grid.Row="0"
                     Grid.Column="1"
                     BackgroundColor="Transparent"
-                    HeightRequest="200"
+                    HeightRequest="100"
                     HorizontalOptions="End"
                     Source="bubbles" />
                 <Label
@@ -65,7 +65,6 @@
                     Text="Join the experience!"
                     TextColor="Black" />
                 <Frame
-                    x:Name="user_name"
                     Grid.Row="3"
                     Grid.Column="1"
                     Margin="0,5"
@@ -78,20 +77,20 @@
                             FontFamily="MaterialIcons-Regular"
                             FontSize="30"
                             RelativeLayout.XConstraint="-12"
-                            RelativeLayout.YConstraint="15"
+                            RelativeLayout.YConstraint="6"
                             Text="{StaticResource UserProfile}" />
                         <local:CustomEntry
+                            x:Name="user_name"
                             FontFamily="Bold-Monsterrat"
                             FontSize="16"
                             Placeholder="Username"
                             PlaceholderColor="Gray"
                             RelativeLayout.XConstraint="20"
-                            RelativeLayout.YConstraint="8"
+                            RelativeLayout.YConstraint="0"
                             WidthRequest="300" />
                     </RelativeLayout>
                 </Frame>
                 <Frame
-                    x:Name="user_email"
                     Grid.Row="4"
                     Grid.Column="1"
                     Margin="0,5"
@@ -104,20 +103,20 @@
                             FontFamily="MaterialIcons-Regular"
                             FontSize="30"
                             RelativeLayout.XConstraint="-12"
-                            RelativeLayout.YConstraint="15"
+                            RelativeLayout.YConstraint="6"
                             Text="{StaticResource Email_Icon}" />
                         <local:CustomEntry
+                            x:Name="user_email"
                             FontFamily="Bold-Monsterrat"
                             FontSize="16"
                             Placeholder="Email Address"
                             PlaceholderColor="Gray"
                             RelativeLayout.XConstraint="20"
-                            RelativeLayout.YConstraint="8"
+                            RelativeLayout.YConstraint="0"
                             WidthRequest="300" />
                     </RelativeLayout>
                 </Frame>
                 <Frame
-                    x:Name="user_pass"
                     Grid.Row="5"
                     Grid.Column="1"
                     Margin="0,5"
@@ -130,20 +129,21 @@
                             FontFamily="MaterialIcons-Regular"
                             FontSize="30"
                             RelativeLayout.XConstraint="-12"
-                            RelativeLayout.YConstraint="15"
+                            RelativeLayout.YConstraint="6"
                             Text="{StaticResource Lock_closed}" />
                         <local:CustomEntry
+                            x:Name="user_pass"
                             FontFamily="Bold-Monsterrat"
                             FontSize="16"
+                            IsPassword="True"
                             Placeholder="Password"
                             PlaceholderColor="Gray"
                             RelativeLayout.XConstraint="20"
-                            RelativeLayout.YConstraint="8"
+                            RelativeLayout.YConstraint="0"
                             WidthRequest="300" />
                     </RelativeLayout>
                 </Frame>
                 <Frame
-                    x:Name="user_confpass"
                     Grid.Row="6"
                     Grid.Column="1"
                     Margin="0,5"
@@ -156,15 +156,17 @@
                             FontFamily="MaterialIcons-Regular"
                             FontSize="30"
                             RelativeLayout.XConstraint="-12"
-                            RelativeLayout.YConstraint="15"
+                            RelativeLayout.YConstraint="6"
                             Text="{StaticResource Lock_open}" />
                         <local:CustomEntry
+                            x:Name="user_confpass"
                             FontFamily="Bold-Monsterrat"
                             FontSize="16"
+                            IsPassword="True"
                             Placeholder="Confirm Password"
                             PlaceholderColor="Gray"
                             RelativeLayout.XConstraint="20"
-                            RelativeLayout.YConstraint="8"
+                            RelativeLayout.YConstraint="0"
                             WidthRequest="300" />
                     </RelativeLayout>
                 </Frame>
@@ -178,6 +180,7 @@
                     <Button
                         x:Name="RegisterButton"
                         BackgroundColor="#fecc31"
+                        Clicked="RegisterButton_Clicked"
                         Font="Large"
                         FontFamily="Bold-Monsterrat"
                         FontSize="20"

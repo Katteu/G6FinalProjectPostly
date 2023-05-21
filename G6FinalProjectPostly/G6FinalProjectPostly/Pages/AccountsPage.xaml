@@ -89,7 +89,11 @@
                             RelativeLayout.YConstraint="20"
                             Text="{StaticResource Arrow_right}"
                             TextColor="Black" />
-                        <Label Text="__________________________________________________________________" RelativeLayout.YConstraint="90" RelativeLayout.XConstraint="40" TextColor="LightGray"/>
+                        <Label
+                            RelativeLayout.XConstraint="40"
+                            RelativeLayout.YConstraint="90"
+                            Text="__________________________________________________________________"
+                            TextColor="LightGray" />
                     </RelativeLayout>
                 </Frame>
                 <Frame
