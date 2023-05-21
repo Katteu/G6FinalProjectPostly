@@ -19,12 +19,14 @@ namespace G6FinalProjectPostly.Pages
         public SentLetter()
         {
             InitializeComponent();
+            UpdateAlternativeContentVisibility();
         }
 
         public SentLetter (string to, string subject, string date, string letter)
 		{
             DataRepository.letterList.Add(new LetterModel() { id = DataRepository.letterList.Count, to = to, subject = subject, date=date, letter=letter, isRead = false });
             InitializeComponent ();
+            UpdateAlternativeContentVisibility();
         }
 
         private void OnFrameTapped(object sender, EventArgs e)

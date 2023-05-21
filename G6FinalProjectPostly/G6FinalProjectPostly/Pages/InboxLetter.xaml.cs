@@ -30,6 +30,8 @@ namespace G6FinalProjectPostly.Pages
             DataRepository.staticList.Add(new LetterModel() { id = DataRepository.staticList.Count, to = to, subject = subject, date = date, letter = letter, isRead = false });
                 isLoaded = true;
             }
+
+            UpdateAlternativeContentVisibility();
         }
 
         async private void viewLetter_Tapped(object sender, EventArgs e)

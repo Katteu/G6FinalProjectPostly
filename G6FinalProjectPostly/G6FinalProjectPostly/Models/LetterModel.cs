@@ -20,17 +20,6 @@ namespace G6FinalProjectPostly.Models
 
         public string to { get { return _to; } set { _to = value; OnPropertyChanged(nameof(to)); } }
 
-        //public DateTime Date
-        //{
-        //    get { return _date.Date; } // Return only the date portion
-        //    set
-        //    {
-        //        // Set the date portion and ignore the time component
-        //        _date = value.Date;
-        //        OnPropertyChanged();
-        //    }
-        //}
-
         public string date { get { return _date; } set { _date = value; OnPropertyChanged(nameof(date)); } }
         public string subject { get { return _subject; } set { _subject = value; OnPropertyChanged(nameof(subject)); } }
 
