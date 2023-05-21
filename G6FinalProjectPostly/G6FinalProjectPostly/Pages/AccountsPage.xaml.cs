@@ -35,6 +35,8 @@ namespace G6FinalProjectPostly.Pages
 
         private void LogoutBtn_Clicked(object sender, EventArgs e)
         {
+            Application.Current.Properties.Remove("email");
+            Application.Current.Properties.Remove("name");  
             Navigation.PushAsync(new LoggedOutPage());
         }
     }
