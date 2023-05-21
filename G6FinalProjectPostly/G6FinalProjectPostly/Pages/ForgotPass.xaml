@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="G6FinalProjectPostly.Pages.ForgotPass"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:G6FinalProjectPostly.CustomButtons"
+    xmlns:lottie="clr-namespace:Lottie.Forms;assembly=Lottie.Forms">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="White" HorizontalOptions="Start">
+            <Grid Margin="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="0.6*" />
+                    <RowDefinition Height="0.3*" />
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <StackLayout
+                    Grid.Row="0"
+                    BackgroundColor="Transparent"
+                    HeightRequest="100"
+                    HorizontalOptions="Start">
+                    <Image Source="wavydrop" WidthRequest="150" />
+                </StackLayout>
+                <StackLayout
+                    Grid.Row="0"
+                    Margin="0"
+                    Padding="0"
+                    BackgroundColor="Transparent">
+                    <lottie:AnimationView
+                        x:Name="animation"
+                        Animation="forgotpass.json"
+                        AutoPlay="True"
+                        HeightRequest="300"
+                        RepeatCount="-1"
+                        RepeatMode="Reverse" />
+                </StackLayout>
+                <Label
+                    Grid.Row="3"
+                    FontFamily="ExtraBold-Monsterrat"
+                    FontSize="25"
+                    HorizontalOptions="Center"
+                    Text="Enter your Email Address"
+                    TextColor="Black" />
+                <Frame
+                    Grid.Row="4"
+                    Margin="0"
+                    Padding="0"
+                    BackgroundColor="Transparent"
+                    HeightRequest="20">
+                    <Label
+                        BackgroundColor="Transparent"
+                        FontFamily="Monsterrat"
+                        FontSize="16"
+                        HorizontalOptions="Center"
+                        Text="Request for a password reset"
+                        TextColor="Black" />
+                </Frame>
+
+                <Frame
+                    Grid.Row="5"
+                    Margin="30"
+                    Padding="10,0,0,0"
+                    BackgroundColor="#ececec"
+                    CornerRadius="15">
+                    <local:CustomEntry
+                        x:Name="usrEmail"
+                        FontAttributes="Bold"
+                        FontFamily="Bold-Monsterrat"
+                        FontSize="14"
+                        Placeholder="Email"
+                        PlaceholderColor="Gray"
+                        TextColor="Black" />
+                </Frame>
+                <Frame
+                    Grid.Row="6"
+                    Grid.RowSpan="2"
+                    Padding="180,18,0,0"
+                    BackgroundColor="Transparent"
+                    HorizontalOptions="End">
+                    <Image
+                        HorizontalOptions="End"
+                        Source="logoutdes_lower"
+                        WidthRequest="250" />
+                </Frame>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

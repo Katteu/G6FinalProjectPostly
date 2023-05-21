@@ -69,7 +69,7 @@ namespace G6FinalProjectPostly
 
         private void ForgotPassButton_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new LoggedOutPage());
+            Navigation.PushAsync(new ForgotPass());
         }
         //Use Session for user Login
     }
