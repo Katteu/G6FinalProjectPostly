@@ -1,4 +1,5 @@
-﻿using G6FinalProjectPostly.Pages.Navigation;
+﻿using G6FinalProjectPostly.Models;
+using G6FinalProjectPostly.Pages.Navigation;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,17 +17,25 @@ namespace G6FinalProjectPostly.Pages
         public AccountsPage()
         {
             InitializeComponent();
-            if (Application.Current.Properties.ContainsKey("email"))
-            {
-                var email = Application.Current.Properties["email"].ToString();
-                user_emailprof.Text = email;
+            //user_emailprof.Text = App.publicName;
+            //user_nameprof.Text = App.publicEmail;
+            //if (Application.Current.Properties.ContainsKey("email"))
+            //{
+            //    var email = Application.Current.Properties["email"].ToString();
+            //    user_emailprof.Text = email;
 
-            }
-            if (Application.Current.Properties.ContainsKey("name"))
-            {
-                var name = Application.Current.Properties["name"].ToString();
-                user_nameprof.Text = name;
-            }
+            //}
+            //if (Application.Current.Properties.ContainsKey("name"))
+            //{
+            //    var name = Application.Current.Properties["name"].ToString();
+            //    user_nameprof.Text = name;
+            //}
+
+            //if(App.publicEmail!=string.Empty && App.publicName != string.Empty)
+            //{
+            //    user_emailprof.Text = App.publicEmail;
+            //    user_nameprof.Text = App.publicName;
+            //}
         }
 
         private void SentLetterBtn_Clicked(object sender, EventArgs e)
@@ -48,6 +57,13 @@ namespace G6FinalProjectPostly.Pages
             Application.Current.Properties.Remove("email");
             Application.Current.Properties.Remove("name");
             Navigation.PushAsync(new LoggedOutPage());
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            user_emailprof.Text = App.publicEmail; 
+            user_nameprof.Text = App.publicName;
         }
     }
 }

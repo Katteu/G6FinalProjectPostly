@@ -21,6 +21,8 @@ namespace G6FinalProjectPostly
 
     public partial class App : Application
     {
+        public static string publicName { get; set; }
+        public static string publicEmail { get; set; }
         public App()
         {
             InitializeComponent();

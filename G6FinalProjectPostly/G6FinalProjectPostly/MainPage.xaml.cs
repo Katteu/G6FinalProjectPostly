@@ -13,12 +13,14 @@ namespace G6FinalProjectPostly
 {
     public partial class MainPage : ContentPage
     {
+
+
         public MainPage()
         {
             InitializeComponent();
         }
 
-        private async void SignUpButton_Clicked(object sender, EventArgs e)
+        private void SignUpButton_Clicked(object sender, EventArgs e)
         {
             List<Users> accountlist = Users.UserList;
             string userEmail = usrEmail.Text;
@@ -34,21 +36,24 @@ namespace G6FinalProjectPostly
                         {
                             Xamarin.Forms.Application.Current.Properties["name"] = usr.Name();
                             Xamarin.Forms.Application.Current.Properties["email"] = usr.Email();
-                            await Xamarin.Forms.Application.Current.SavePropertiesAsync();
+                            Xamarin.Forms.Application.Current.SavePropertiesAsync();
 
                             usrEmail.Text = usrPass.Text = string.Empty;
 
-                            await Navigation.PushAsync(App.TabbedPage);
+                            App.publicEmail = userEmail;
+                            App.publicName = usr.Name();
+
+                            Navigation.PushAsync(App.TabbedPage);
                         }
                         else
                         {
-                            await DisplayAlert("Alert", "Your account cannot be found, please create an account.", "Close");
+                            DisplayAlert("Alert", "Your account cannot be found, please create an account.", "Close");
                         }
                     }
                 }
                 else
                 {
-                    await DisplayAlert("Alert", "Account not found!", "Close");
+                    DisplayAlert("Alert", "Account not found!", "Close");
                 }
 
 
@@ -56,7 +61,7 @@ namespace G6FinalProjectPostly
             else
             {
                 //Console.WriteLine("No input found!");
-                await DisplayAlert("Alert", "Please fill in all the fields to login.", "Ok");
+                DisplayAlert("Alert", "Please fill in all the fields to login.", "Ok");
             }
         }
 
