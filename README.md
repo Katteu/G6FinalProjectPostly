@@ -6,3 +6,7 @@ Reminders:
 1. This application does not utilize any database.
 2. This application only utilizes dynamic lists.
 3. Inbox section is static and not dynamic.
+
+App Developers:
+Kathea Mari C. Mayol
+Tryone C. Ybañez
