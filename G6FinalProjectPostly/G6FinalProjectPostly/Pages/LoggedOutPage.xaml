@@ -34,36 +34,18 @@
                     FontFamily="MontReg"
                     FontSize="14"
                     HorizontalOptions="CenterAndExpand"
-                    Text="You may log in again or close the application"
+                    Text="Feel free to come back anytime!"
                     TextColor="Black"
                     VerticalOptions="CenterAndExpand" />
                 <Button
-                    x:Name="RedirectLoginBtn"
+                    x:Name="CloseBtn"
                     Margin="80,5,80,5"
                     BackgroundColor="#fecc31"
-                    Clicked="RedirectLoginBtn_Clicked"
+                    Clicked="CloseBtn_Clicked"
                     CornerRadius="15"
                     FontFamily="MontBold"
                     FontSize="20"
-                    Text="GO TO LOGIN PAGE" />
-                <Frame
-                    Margin="80,5,80,5"
-                    Padding="0"
-                    BackgroundColor="Transparent"
-                    BorderColor="#fecc31"
-                    CornerRadius="15">
-                    <Button
-                        x:Name="CloseBtn"
-                        Margin="1,0.5"
-                        BackgroundColor="Transparent"
-                        BorderColor="#fecc31"
-                        Clicked="CloseBtn_Clicked"
-                        CornerRadius="15"
-                        FontFamily="MontBold"
-                        FontSize="20"
-                        Text="CLOSE APP"
-                        TextColor="#fecc31" />
-                </Frame>
+                    Text="CLOSE APP" />
 
             </StackLayout>
             <StackLayout

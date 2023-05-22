@@ -36,6 +36,11 @@ namespace G6FinalProjectPostly.Pages
             var targetPage = tabbedPage.Children.FirstOrDefault(page => page is MainFlyoutPage);
 
             tabbedPage.CurrentPage = targetPage;
+
+            if (targetPage is MainFlyoutPage mainFlyoutPage)
+            {
+                mainFlyoutPage.Detail = new NavigationPage(new SentLetter());
+            }
         }
 
         private void LogoutBtn_Clicked(object sender, EventArgs e)

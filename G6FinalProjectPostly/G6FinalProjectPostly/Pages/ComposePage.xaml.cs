@@ -38,8 +38,11 @@ namespace G6FinalProjectPostly.Pages
                 tabbedPage.CurrentPage = targetPage;
                 tabbedPage.CurrentPage = App.TabbedPage.Children[2];
                 tabbedPage.CurrentPage = App.TabbedPage.Children[0];
-
                 tabbedPage.CurrentPage = App.TabbedPage.Children[2];
+                if (tabbedPage.CurrentPage is MainFlyoutPage mainFlyoutPage)
+                {
+                    mainFlyoutPage.Detail = new NavigationPage(new SentLetter());
+                }
             }
             else
             {
