@@ -73,7 +73,8 @@
                             FontFamily="MontBold"
                             FontSize="16"
                             Placeholder="Email Address"
-                            PlaceholderColor="Gray"/>
+                            PlaceholderColor="Gray"
+                            WidthRequest="290"/>
                 </StackLayout>
             </Frame>
             <Frame
