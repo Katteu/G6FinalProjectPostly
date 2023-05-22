@@ -19,7 +19,7 @@ namespace G6FinalProjectPostly.Pages.Mailbox
             InitializeComponent();
         }
 
-        public ViewInbox(LetterModel letter)
+        public ViewInbox(LetterModel letter,string name)
         {
             InitializeComponent();
             letterNew = letter;
@@ -27,6 +27,7 @@ namespace G6FinalProjectPostly.Pages.Mailbox
             subjLabel.Text = letter.subject;
             dateLabel.Text = letter.date;
             letterLabel.Text = letter.letter;
+            receiver.Text = name;
         }
 
         async private void back_Tapped(object sender, EventArgs e)

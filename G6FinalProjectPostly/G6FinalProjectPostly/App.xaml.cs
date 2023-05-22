@@ -1,4 +1,6 @@
-﻿using System;
+﻿using G6FinalProjectPostly.CustomRenderers;
+using G6FinalProjectPostly.Pages;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -22,9 +24,11 @@ namespace G6FinalProjectPostly
         public App()
         {
             InitializeComponent();
-
-            MainPage = new NavigationPage(new G6FinalProjectPostly.Pages.PostlyTabbedPage());
+            App.TabbedPage = new PostlyTabbedPage();
+            MainPage = new NavigationPage(new MainPage());
         }
+
+        public static PostlyTabbedPage TabbedPage { get; set; }
 
         protected override void OnStart()
         {

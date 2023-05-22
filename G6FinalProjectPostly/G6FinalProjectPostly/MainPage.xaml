@@ -1,7 +1,154 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="G6FinalProjectPostly.MainPage">
+<ContentPage
+    x:Class="G6FinalProjectPostly.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:G6FinalProjectPostly.CustomRenderers"
+    NavigationPage.HasNavigationBar="False">
 
+    <StackLayout
+        Margin="0"
+        BackgroundColor="White"
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="FillAndExpand">
+        <Image BackgroundColor="green" Source="logoutdex_lower" />
+        <StackLayout
+            Padding="0,75,0,0"
+            HorizontalOptions="Center"
+            VerticalOptions="Center">
+            <Image Source="loginletter" WidthRequest="230" />
+        </StackLayout>
+        <StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.1*" />
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="2.5*" />
+                    <RowDefinition Height="2.5*" />
+                    <RowDefinition Height="2.5*" />
+                    <RowDefinition Height="2.5*" />
+                    <RowDefinition Height="3*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="7*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label  Grid.Row="1"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="3"
+                        x:Name="welcome"
+                        FontAttributes="Bold"
+                        FontFamily="MontExtraBold"
+                        FontSize="30"
+                        HorizontalOptions="Center"
+                        Text="Welcome to Postly!"
+                        TextColor="Black" 
+                        Padding="0"
+                        Margin="0"/>
+                <Label  Grid.Row="2"
+                        Grid.Column="1"
+                        HorizontalOptions="Center"
+                        FontAttributes="Bold"
+                        FontFamily="MontReg"
+                        FontSize="16"
+                        Text="One letter at a time"
+                        TextColor="Gray" 
+                        Margin="0,-5,0,5"/>
+                <Frame
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    Margin="2"
+                    Padding="10,0,0,0"
+                    BackgroundColor="#ececec"
+                    CornerRadius="15">
+                    <local:CustomEntry
+                        x:Name="usrEmail"
+                        FontAttributes="Bold"
+                        FontFamily="MontBold"
+                        FontSize="14"
+                        Placeholder="Email"
+                        PlaceholderColor="Black" />
+                </Frame>
+                <Frame
+                    Grid.Row="4"
+                    Grid.Column="1"
+                    Margin="2"
+                    Padding="10,0,0,0"
+                    BackgroundColor="#ececec"
+                    CornerRadius="15">
+                    <local:CustomEntry
+                        x:Name="usrPass"
+                        FontAttributes="Bold"
+                        FontFamily="MontBold"
+                        FontSize="14"
+                        IsPassword="True"
+                        Placeholder="Password"
+                        PlaceholderColor="Black" />
+                </Frame>
+                <Frame
+                    Grid.Row="5"
+                    Grid.Column="1"
+                    Padding="0,0,0,0"
+                    BackgroundColor="#fecc31"
+                    CornerRadius="15">
+                    <Button
+                        x:Name="SignUpButton"   
+                        BackgroundColor="#fecc31"
+                        Clicked="SignUpButton_Clicked"
+                        Font="Large"
+                        FontFamily="MontBold"
+                        FontSize="20"
+                        Text="LOGIN" />
+                </Frame>
+                <Frame
+                    Grid.Row="6"
+                    Grid.Column="1"
+                    Margin="0,0,0,0"
+                    Padding="0,0,0,0"
+                    BackgroundColor="Transparent"
+                    CornerRadius="15">
+                    <Button
+                        x:Name="ForgotPassButton"
+                        BackgroundColor="Transparent"
+                        Clicked="ForgotPassButton_Clicked"
+                        FontSize="14"
+                        Text="Forgot Password?"
+                        TextColor="#fecc31" />
+                </Frame>
+                <Frame
+                    Grid.Row="8"
+                    Grid.Column="1"
+                    Padding="0,0,0,0"
+                    BackgroundColor="Transparent"
+                    HeightRequest="20"
+                    HorizontalOptions="Center">
+                    <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span
+                                    FontSize="16"
+                                    RelativeLayout.XConstraint="60"
+                                    Text="Don't have an account? "
+                                    TextColor="Black" />
+                                <Span
+                                    FontSize="16"
+                                    RelativeLayout.XConstraint="60"
+                                    Text="Sign Up Now!"
+                                    TextColor="#fecc31" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="SignUpBtn" Tapped="SignUpBtn_Tapped" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Frame>
+            </Grid>
+        </StackLayout>
+
+    </StackLayout>
 
 </ContentPage>

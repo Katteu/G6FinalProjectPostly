@@ -17,6 +17,7 @@ namespace G6FinalProjectPostly.Pages
 	{
         private bool isLoaded = false;
         public static bool isDeleted = false;
+        string name;
         public InboxLetter ()
 		{
 			InitializeComponent ();
@@ -49,7 +50,7 @@ namespace G6FinalProjectPostly.Pages
                 letter = indx;
             }
 
-            await Navigation.PushModalAsync(new ViewInbox(letter));
+            await Navigation.PushModalAsync(new ViewInbox(letter,name));
         }
 
         private async void deleteLetter_Tapped(object sender, EventArgs e)
@@ -109,6 +110,10 @@ namespace G6FinalProjectPostly.Pages
         {
             base.OnAppearing();
             letterListView.ItemsSource = DataRepository.staticList;
+            if (Application.Current.Properties.ContainsKey("name"))
+            {
+                name = Application.Current.Properties["name"].ToString();
+            }
             UpdateAlternativeContentVisibility();
         }
     }

@@ -36,12 +36,10 @@ namespace G6FinalProjectPostly.Pages
                 TabbedPage tabbedPage = (TabbedPage)Parent;
 
                 tabbedPage.CurrentPage = targetPage;
+                tabbedPage.CurrentPage = App.TabbedPage.Children[2];
+                tabbedPage.CurrentPage = App.TabbedPage.Children[0];
 
-                // Find the desired page within the TabbedPage
-                var targetzPage = tabbedPage.Children.FirstOrDefault(page => page is MainFlyoutPage);
-
-                // Set the active page to the desired page
-                tabbedPage.CurrentPage = targetzPage;
+                tabbedPage.CurrentPage = App.TabbedPage.Children[2];
             }
             else
             {

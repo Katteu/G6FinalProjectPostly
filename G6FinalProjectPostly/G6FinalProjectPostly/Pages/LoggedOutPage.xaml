@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage
+    x:Class="G6FinalProjectPostly.Pages.LoggedOutPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout
+            Margin="0"
+            BackgroundColor="White"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand">
+            <StackLayout HorizontalOptions="Start">
+                <Image Source="logoutdes_upper" WidthRequest="300" />
+            </StackLayout>
+
+            <StackLayout>
+                <Image
+                    Margin="0,0,0,20"
+                    Source="logedoutguy"
+                    WidthRequest="350" />
+                <Label
+                    Margin="0"
+                    Padding="0"
+                    BackgroundColor="White"
+                    FontFamily="MontExtraBold"
+                    FontSize="30"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Your are logged out."
+                    TextColor="Black"
+                    VerticalOptions="CenterAndExpand" />
+                <Label
+                    BackgroundColor="White"
+                    FontFamily="MontReg"
+                    FontSize="14"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="You may log in again or close the application"
+                    TextColor="Black"
+                    VerticalOptions="CenterAndExpand" />
+                <Button
+                    x:Name="RedirectLoginBtn"
+                    Margin="80,5,80,5"
+                    BackgroundColor="#fecc31"
+                    Clicked="RedirectLoginBtn_Clicked"
+                    CornerRadius="15"
+                    FontFamily="MontBold"
+                    FontSize="20"
+                    Text="GO TO LOGIN PAGE" />
+                <Frame
+                    Margin="80,5,80,5"
+                    Padding="0"
+                    BackgroundColor="Transparent"
+                    BorderColor="#fecc31"
+                    CornerRadius="15">
+                    <Button
+                        x:Name="CloseBtn"
+                        Margin="1,0.5"
+                        BackgroundColor="Transparent"
+                        BorderColor="#fecc31"
+                        Clicked="CloseBtn_Clicked"
+                        CornerRadius="15"
+                        FontFamily="MontBold"
+                        FontSize="20"
+                        Text="CLOSE APP"
+                        TextColor="#fecc31" />
+                </Frame>
+
+            </StackLayout>
+            <StackLayout
+                Margin="0,20"
+                BackgroundColor="White"
+                HorizontalOptions="End"
+                VerticalOptions="End">
+                <Image Source="logoutdes_lower" WidthRequest="400" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

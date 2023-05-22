@@ -14,6 +14,6 @@
     <local:HomePage Title="Home" IconImageSource="HomeIcon"/>
     <local:ComposePage Title="Compose" IconImageSource="PencilIcon"/>
     <page:MainFlyoutPage Title="Mailbox" IconImageSource="MailIcon"/>
-    <local:ProfilePage Title="Profile" IconImageSource="UserIcon"/>
+    <local:AccountsPage Title="Profile" IconImageSource="UserIcon"/>
     
 </TabbedPage>

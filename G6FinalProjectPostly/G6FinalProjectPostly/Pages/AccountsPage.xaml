@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage
+    x:Class="G6FinalProjectPostly.Pages.AccountsPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Name="accountPage"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="White">
+            <StackLayout
+                Padding="0"
+                BackgroundColor="#fecc31"
+                WidthRequest="80">
+                <RelativeLayout HeightRequest="170">
+                    <Label
+                        FontFamily="MontExtraBold"
+                        FontSize="30"
+                        RelativeLayout.XConstraint="75"
+                        RelativeLayout.YConstraint="30"
+                        Text="Account Profile"
+                        TextColor="Black" />
+                    <Image
+                        RelativeLayout.XConstraint="125"
+                        RelativeLayout.YConstraint="90"
+                        Source="userprof"
+                        WidthRequest="150" />
+                </RelativeLayout>
+            </StackLayout>
+            <StackLayout BackgroundColor="Transparent" HeightRequest="700">
+                <Frame
+                    Margin="0,70,0,0"
+                    Padding="0"
+                    BackgroundColor="Transparent"
+                    HeightRequest="30"
+                    HorizontalOptions="Center">
+                    <Label
+                        x:Name="user_nameprof"
+                        BackgroundColor="Transparent"
+                        FontFamily="MontBold"
+                        FontSize="25"
+                        TextColor="Black" />
+                </Frame>
+                <Frame
+                    Padding="0"
+                    BackgroundColor="Transparent"
+                    HeightRequest="30"
+                    HorizontalOptions="Center">
+                    <Label
+                        x:Name="user_emailprof"
+                        BackgroundColor="Transparent"
+                        FontFamily="MontReg"
+                        FontSize="20"
+                        TextColor="Black" />
+                </Frame>
+                <Grid Margin="0,15,0,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="8*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+                        <StackLayout Margin="0,10,0,0" Grid.Column="0" Orientation="Horizontal">
+                        <Frame
+                            Padding="9"
+                            Margin="40,0,10,0"
+                            BackgroundColor="#ececec"
+                            HorizontalOptions="End"
+                            CornerRadius="2">
+                            <Label
+                                FontFamily="RegularMaterial"
+                                FontSize="30"
+                                Text="{StaticResource SentEmail_Icon}"
+                                TextColor="Black" />
+                        </Frame>
+                        <Label         
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"
+                            BackgroundColor="Transparent"
+                            FontFamily="MontReg"
+                            FontSize="20"
+                            Text="Sent Letters"
+                            TextColor="Black" />
+                        </StackLayout>
+                        <Button
+                            Grid.Column="1"
+                            x:Name="SentLetterBtn"
+                            Padding="0"
+                            Margin="0,10,10,0"
+                            BackgroundColor="Transparent"
+                            TextColor="#595959"
+                            Clicked="SentLetterBtn_Clicked"
+                            FontFamily="RegularMaterial"
+                            FontSize="30"
+                            Text="{StaticResource Arrow_right}"/>
+
+                    </Grid>
+                    <BoxView Grid.Row="1" HeightRequest="0.5" BackgroundColor="Gray" Opacity="0.8" Margin="40,10,40,0"/>
+                    <Grid Grid.Row="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="8*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+                        <StackLayout Margin="0,10,0,0" Grid.Column="0" Orientation="Horizontal">
+                            <Frame
+                            Padding="9"
+                            Margin="40,0,10,0"
+                            BackgroundColor="#ececec"
+                            HorizontalOptions="End"
+                            CornerRadius="2">
+                                <Label
+                                FontFamily="RegularMaterial"
+                                FontSize="30"
+                                Text="{StaticResource Logout_Icon}"
+                                TextColor="Black" />
+                            </Frame>
+                            <Label         
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"
+                            BackgroundColor="Transparent"
+                            FontFamily="MontReg"
+                            FontSize="20"
+                            Text="Log Out"
+                            TextColor="Black" />
+                        </StackLayout>
+                        <Button
+                            Grid.Column="1"
+                            x:Name="LogoutBtn"
+                            Padding="0"
+                            Margin="0,10,10,0"
+                            BackgroundColor="Transparent"
+                            TextColor="#595959"
+                            Clicked="LogoutBtn_Clicked"
+                            FontFamily="RegularMaterial"
+                            FontSize="30"
+                            Text="{StaticResource Arrow_right}"/>
+
+                    </Grid>
+                </Grid>
+
+        
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "G6FinalProjectPostly.Androi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "G6FinalProjectPostly.iOS", "G6FinalProjectPostly\G6FinalProjectPostly.iOS\G6FinalProjectPostly.iOS.csproj", "{BB88475F-B084-4E2A-A17A-A8073F38FFE4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "G6FinalProjectPostly", "G6FinalProjectPostly\G6FinalProjectPostly\G6FinalProjectPostly.csproj", "{87C31572-9446-4FA2-BDDB-2392220C271C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "G6FinalProjectPostly", "G6FinalProjectPostly\G6FinalProjectPostly\G6FinalProjectPostly.csproj", "{87C31572-9446-4FA2-BDDB-2392220C271C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage
+    x:Class="G6FinalProjectPostly.Pages.RegisterPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:G6FinalProjectPostly.CustomRenderers"
+    NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Content>
+        <StackLayout
+            Margin="0"
+            BackgroundColor="White"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand">
+            <StackLayout HorizontalOptions="End">
+                <Image
+                    RotationY="180"
+                    Source="logoutdes_upper"
+                    WidthRequest="150" />
+            </StackLayout>
+            <Grid Margin="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.8*" />
+                    <RowDefinition Height="0.8*" />
+                    <RowDefinition Height="0.5*" />
+                    <RowDefinition Height="1.2*" />
+                    <RowDefinition Height="1.2*" />
+                    <RowDefinition Height="1.2*" />
+                    <RowDefinition Height="1.2*" />
+                    <RowDefinition Height="1.4*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="7*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Image
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    BackgroundColor="Transparent"
+                    HeightRequest="100"
+                    HorizontalOptions="End"
+                    Source="bubbles" />
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Margin="0"
+                    Padding="0"
+                    BackgroundColor="Transparent"
+                    FontFamily="MontExtraBold"
+                    FontSize="30"
+                    Text="Create an Account"
+                    TextColor="Black"
+                    VerticalTextAlignment="Center" />
+                <Label
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    BackgroundColor="Transparent"
+                    FontFamily="MontReg"
+                    FontSize="16"
+                    Text="Join the experience!"
+                    TextColor="Black" />
+                <Frame
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    Margin="0,5"
+                    Padding="25,0,25,0"
+                    BackgroundColor="#ececec"
+                    CornerRadius="20"
+                    HeightRequest="60">
+                    <RelativeLayout>
+                        <Label
+                            FontFamily="RegularMaterial"
+                            FontSize="30"
+                            RelativeLayout.XConstraint="-12"
+                            RelativeLayout.YConstraint="10"
+                            Text="{StaticResource UserProfile}" />
+                        <local:CustomEntry
+                            x:Name="user_name"
+                            FontFamily="MontBold"
+                            FontSize="16"
+                            Placeholder="Username"
+                            PlaceholderColor="Gray"
+                            RelativeLayout.XConstraint="20"
+                            RelativeLayout.YConstraint="5"
+                            WidthRequest="300" />
+                    </RelativeLayout>
+                </Frame>
+                <Frame
+                    Grid.Row="4"
+                    Grid.Column="1"
+                    Margin="0,5"
+                    Padding="25,0,25,0"
+                    BackgroundColor="#ececec"
+                    CornerRadius="20"
+                    HeightRequest="60">
+                    <RelativeLayout>
+                        <Label
+                            FontFamily="RegularMaterial"
+                            FontSize="30"
+                            RelativeLayout.XConstraint="-12"
+                            RelativeLayout.YConstraint="12"
+                            Text="{StaticResource Email_Icon}" />
+                        <local:CustomEntry
+                            x:Name="user_email"
+                            FontFamily="MontBold"
+                            FontSize="16"
+                            Placeholder="Email Address"
+                            PlaceholderColor="Gray"
+                            RelativeLayout.XConstraint="20"
+                            RelativeLayout.YConstraint="5"
+                            WidthRequest="300" />
+                    </RelativeLayout>
+                </Frame>
+                <Frame
+                    Grid.Row="5"
+                    Grid.Column="1"
+                    Margin="0,5"
+                    Padding="25,0,25,0"
+                    BackgroundColor="#ececec"
+                    CornerRadius="20"
+                    HeightRequest="60">
+                    <RelativeLayout>
+                        <Label
+                            FontFamily="RegularMaterial"
+                            FontSize="30"
+                            RelativeLayout.XConstraint="-12"
+                            RelativeLayout.YConstraint="10"
+                            Text="{StaticResource Lock_closed}" />
+                        <local:CustomEntry
+                            x:Name="user_pass"
+                            FontFamily="MontBold"
+                            FontSize="16"
+                            IsPassword="True"
+                            Placeholder="Password"
+                            PlaceholderColor="Gray"
+                            RelativeLayout.XConstraint="20"
+                            RelativeLayout.YConstraint="5"
+                            WidthRequest="300" />
+                    </RelativeLayout>
+                </Frame>
+                <Frame
+                    Grid.Row="6"
+                    Grid.Column="1"
+                    Margin="0,5"
+                    Padding="25,0,25,0"
+                    BackgroundColor="#ececec"
+                    CornerRadius="20"
+                    HeightRequest="60">
+                    <RelativeLayout>
+                        <Label
+                            FontFamily="RegularMaterial"
+                            FontSize="30"
+                            RelativeLayout.XConstraint="-12"
+                            RelativeLayout.YConstraint="10"
+                            Text="{StaticResource Lock_open}" />
+                        <local:CustomEntry
+                            x:Name="user_confpass"
+                            FontFamily="MontBold"
+                            FontSize="16"
+                            IsPassword="True"
+                            Placeholder="Confirm Password"
+                            PlaceholderColor="Gray"
+                            RelativeLayout.XConstraint="20"
+                            RelativeLayout.YConstraint="5"
+                            WidthRequest="300" />
+                    </RelativeLayout>
+                </Frame>
+                <Frame
+                    Grid.Row="7"
+                    Grid.Column="1"
+                    Margin="0,10"
+                    Padding="0"
+                    BackgroundColor="#fecc31"
+                    CornerRadius="15">
+                    <Button
+                        x:Name="RegisterButton"
+                        BackgroundColor="#fecc31"
+                        Clicked="RegisterButton_Clicked"
+                        Font="Large"
+                        FontFamily="MontBold"
+                        FontSize="20"
+                        Text="SIGN UP" />
+                </Frame>
+                <Frame
+                    Grid.Row="8"
+                    Grid.RowSpan="3"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="3"
+                    Margin="0,0,0,-10"
+                    Padding="0"
+                    BackgroundColor="Transparent">
+                    <Image
+                        Aspect="Fill"
+                        Source="waves"
+                        WidthRequest="200" />
+                </Frame>
+                <Frame
+                    Grid.Row="11"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="3"
+                    Margin="0,0,0,0"
+                    Padding="0,0,0,0"
+                    BackgroundColor="#fecc31">
+                    <Label HorizontalOptions="Center">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span
+                                    BackgroundColor="#fecc31"
+                                    FontSize="16"
+                                    RelativeLayout.XConstraint="60"
+                                    Text="Already have an account? "
+                                    TextColor="Black" />
+                                <Span
+                                    BackgroundColor="#fecc31"
+                                    FontSize="16"
+                                    RelativeLayout.XConstraint="60"
+                                    Text="Sign In"
+                                    TextColor="White" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="LoginBtn" Tapped="LoginBtn_Tapped" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Frame>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

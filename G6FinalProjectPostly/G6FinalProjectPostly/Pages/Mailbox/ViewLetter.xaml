@@ -14,8 +14,8 @@
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
             </Grid>
-            <StackLayout  Orientation="Horizontal">
-            <Label Grid.Column="0" Grid.Row="0" x:Name="subjLabel" Text="Happy Memories" Padding="15,0,0,0" FontFamily="MontExtraBold" HorizontalOptions="CenterAndExpand" TextColor="Black" FontSize="25"/>
+            <StackLayout Orientation="Horizontal">
+            <Label Grid.Column="0" Grid.Row="0" x:Name="subjLabel" Padding="15,0,0,0" FontFamily="MontExtraBold" HorizontalOptions="CenterAndExpand" TextColor="Black" FontSize="25"/>
                 <Label Grid.Column="1" Grid.Row="0" Text="&#xe5cd;" FontSize="25" FontFamily="RegularMaterial" Margin="0,0,15,0" HorizontalOptions="End" VerticalOptions="Center">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer Tapped="back_Tapped"/>
@@ -40,9 +40,9 @@
                     </Grid.RowDefinitions>
                     <Image Source="yellowIcon.png" Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" Margin="15,-10,0,0"/>
                     <StackLayout Grid.Column="1" Grid.Row="0" Orientation="Horizontal">
-                    <Label x:Name="from" Text="John Doe" FontFamily="MontBold" TextColor="Black" />
+                    <Label x:Name="from" FontFamily="MontBold" TextColor="Black" />
                     <Label x:Name="email" HorizontalOptions="Start" VerticalOptions="Center" TextColor="#828282" 
-                           FontFamily="MontBold" FontSize="11.5" Text="&lt;johndoe@gmail.com>"/>
+                           FontFamily="MontBold" FontSize="11.5"/>
                     </StackLayout>
                     <Label x:Name="toLabel" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1"  FontFamily="MontBold" 
                            FontSize="12.5" Margin="0,-5,0,0"/>

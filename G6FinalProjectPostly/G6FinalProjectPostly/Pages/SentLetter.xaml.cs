@@ -16,6 +16,7 @@ namespace G6FinalProjectPostly.Pages
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class SentLetter : ContentPage
 	{
+        string name, email;
         public SentLetter()
         {
             InitializeComponent();
@@ -32,15 +33,14 @@ namespace G6FinalProjectPostly.Pages
 
         private void OnFrameTapped(object sender, EventArgs e)
         {
-            var navigationPage = App.Current.MainPage as NavigationPage;
-            var tabbedPage = navigationPage.RootPage as PostlyTabbedPage;
+            var postlyTabbedPage = App.TabbedPage;
 
-            var targetPage = tabbedPage.Children.FirstOrDefault(page => page is ComposePage);
+            int targetPageIndex = 1;
 
-            if (targetPage != null)
-            {
-                tabbedPage.CurrentPage = targetPage;
-            }
+            var targetPage = postlyTabbedPage.Children[targetPageIndex];
+
+            postlyTabbedPage.CurrentPage = targetPage;
+
         }
 
 
@@ -59,7 +59,7 @@ namespace G6FinalProjectPostly.Pages
                     letter = indx;
             }
 
-            await Navigation.PushModalAsync(new ViewLetter(letter));
+            await Navigation.PushModalAsync(new ViewLetter(letter,name,email));
         }
 
         private async void editLetter_Tapped(object sender, EventArgs e)
@@ -131,6 +131,15 @@ namespace G6FinalProjectPostly.Pages
         protected override void OnAppearing()
         {
             base.OnAppearing();
+            if (Application.Current.Properties.ContainsKey("name"))
+            {
+                name = Application.Current.Properties["name"].ToString();
+            }
+
+            if (Application.Current.Properties.ContainsKey("email"))
+            {
+                email = Application.Current.Properties["email"].ToString();
+            }
             letterListView.ItemsSource = DataRepository.letterList;
             UpdateAlternativeContentVisibility();
         }

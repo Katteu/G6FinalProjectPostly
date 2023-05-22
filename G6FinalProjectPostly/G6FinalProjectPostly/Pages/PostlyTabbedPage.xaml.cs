@@ -1,4 +1,5 @@
-﻿using System;
+﻿using G6FinalProjectPostly.Pages.Navigation;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,7 +18,7 @@ namespace G6FinalProjectPostly.Pages
         public PostlyTabbedPage()
         {
             InitializeComponent();
-            //On<Android>().SetToolbarPlacement(ToolbarPlacement.Bottom);
         }
+
     }
 }
