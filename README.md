@@ -9,4 +9,4 @@ Postly is a captivating application designed to empower users with the ability t
 
 ## App Developers
 - Kathea Mari C. Mayol
-- Tryone C. Ybañez
+- Tyrone C. Ybañez
