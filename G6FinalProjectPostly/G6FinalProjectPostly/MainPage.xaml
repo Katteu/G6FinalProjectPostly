@@ -67,6 +67,7 @@
                     CornerRadius="15">
                     <local:CustomEntry
                         x:Name="usrEmail"
+                        Keyboard="Email"
                         FontAttributes="Bold"
                         FontFamily="MontBold"
                         FontSize="14"

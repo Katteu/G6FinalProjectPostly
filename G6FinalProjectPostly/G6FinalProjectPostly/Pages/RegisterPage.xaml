@@ -110,6 +110,7 @@
                             x:Name="user_email"
                             FontFamily="MontBold"
                             FontSize="16"
+                            Keyboard="Email"
                             Placeholder="Email Address"
                             PlaceholderColor="Gray"
                             RelativeLayout.XConstraint="20"
