@@ -19,7 +19,7 @@ namespace G6FinalProjectPostly.Pages
 
         private void CloseBtn_Clicked(object sender, EventArgs e)
         {
-            System.Environment.Exit(0);
+            System.Diagnostics.Process.GetCurrentProcess().Kill();
         }
 
     }
