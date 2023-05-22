@@ -16,7 +16,7 @@
 
             <StackLayout>
                 <Image
-                    Margin="0,0,0,20"
+                    Margin="0,-40,0,20"
                     Source="logedoutguy"
                     WidthRequest="350" />
                 <Label

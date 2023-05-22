@@ -27,7 +27,7 @@ namespace G6FinalProjectPostly.Pages.Mailbox
             subjLabel.Text = letter.subject;
             dateLabel.Text = letter.date;
             letterLabel.Text = letter.letter;
-            receiver.Text = name;
+            receiver.Text = "To "+name;
         }
 
         async private void back_Tapped(object sender, EventArgs e)
