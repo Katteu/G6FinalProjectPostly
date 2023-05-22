@@ -8,5 +8,5 @@ Reminders:
 3. Inbox section is static and not dynamic.
 
 App Developers:
-Kathea Mari C. Mayol
-Tryone C. Ybañez
+- Kathea Mari C. Mayol
+- Tryone C. Ybañez
