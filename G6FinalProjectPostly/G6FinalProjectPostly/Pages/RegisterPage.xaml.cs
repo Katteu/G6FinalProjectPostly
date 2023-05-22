@@ -33,7 +33,7 @@ namespace G6FinalProjectPostly.Pages
             {
                 await DisplayAlert("Alert", "One of the fields is missing!", "OK");
             }
-            else if(!(userEmail.ToLower().Contains('@')) && !(userEmail.ToLower().Contains('.'))){
+            else if(!(userEmail.ToLower().Contains('@')) || !(userEmail.ToLower().Contains('.'))){
                 await DisplayAlert("Error!", "Input correct email format.", "OK");
             }
             else

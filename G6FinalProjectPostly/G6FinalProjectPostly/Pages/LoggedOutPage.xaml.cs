@@ -17,9 +17,15 @@ namespace G6FinalProjectPostly.Pages
             InitializeComponent();
         }
 
-        private void RedirectLoginBtn_Clicked(object sender, EventArgs e)
+        private async void RedirectLoginBtn_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new MainPage());
+            var navigationStack = new List<Page>(Navigation.NavigationStack);
+            foreach (var page in navigationStack.Skip(1))
+            {
+                Navigation.RemovePage(page);
+            }
+
+            await Navigation.PushAsync(new MainPage());
         }
 
         private void CloseBtn_Clicked(object sender, EventArgs e)

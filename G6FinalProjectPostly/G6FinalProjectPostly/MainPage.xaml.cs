@@ -18,7 +18,7 @@ namespace G6FinalProjectPostly
             InitializeComponent();
         }
 
-        private void SignUpButton_Clicked(object sender, EventArgs e)
+        private async void SignUpButton_Clicked(object sender, EventArgs e)
         {
             List<Users> accountlist = Users.UserList;
             string userEmail = usrEmail.Text;
@@ -34,20 +34,21 @@ namespace G6FinalProjectPostly
                         {
                             Xamarin.Forms.Application.Current.Properties["name"] = usr.Name();
                             Xamarin.Forms.Application.Current.Properties["email"] = usr.Email();
-                            Xamarin.Forms.Application.Current.SavePropertiesAsync();
+                            await Xamarin.Forms.Application.Current.SavePropertiesAsync();
 
                             usrEmail.Text = usrPass.Text = string.Empty;
-                            Navigation.PushAsync(App.TabbedPage);
+
+                            await Navigation.PushAsync(App.TabbedPage);
                         }
                         else
                         {
-                            DisplayAlert("Alert", "Your account cannot be found, please create an account.", "Close");
+                            await DisplayAlert("Alert", "Your account cannot be found, please create an account.", "Close");
                         }
                     }
                 }
                 else
                 {
-                    DisplayAlert("Alert", "Account not found!", "Close");
+                    await DisplayAlert("Alert", "Account not found!", "Close");
                 }
 
 
@@ -55,7 +56,7 @@ namespace G6FinalProjectPostly
             else
             {
                 //Console.WriteLine("No input found!");
-                DisplayAlert("Alert", "Please fill in all the fields to login.", "Ok");
+                await DisplayAlert("Alert", "Please fill in all the fields to login.", "Ok");
             }
         }
 
